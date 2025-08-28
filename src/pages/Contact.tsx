@@ -79,7 +79,7 @@ const Contact = () => {
             </span>
           </h1>
           <p className="font-mono text-xl text-muted-foreground animate-flicker">
-            &gt; Establish connection to the retro gaming network
+            &gt; Establish connection to the data analytics network
           </p>
         </div>
         
@@ -87,17 +87,17 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto">
           <RetroCard glowing animated className="p-8">
             <h2 className="font-retro text-3xl mb-8 text-center neon-text-lg">
-              System Connection Form
+              Data Connection Protocol
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <RetroInput
-                label="Player Name"
+                label="Full Name"
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Enter your handle..."
+                placeholder="Enter your name..."
                 required
               />
               
@@ -112,11 +112,11 @@ const Contact = () => {
               />
               
               <RetroTextarea
-                label="Message"
+                label="Project Details"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Type your message to the mainframe..."
+                placeholder="Describe your data analysis needs..."
                 required
               />
               
@@ -128,7 +128,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className={isSubmitting ? "opacity-50 cursor-not-allowed" : ""}
                 >
-                  {isSubmitting ? "Transmitting..." : "Send Message"}
+                  {isSubmitting ? "Processing Data..." : "Send Message"}
                 </NeonButton>
               </div>
             </form>
@@ -136,16 +136,16 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="mt-12 pt-8 border-t border-border/50">
               <h3 className="font-retro text-xl mb-6 text-center neon-text">
-                Alternative Connection Methods
+                Professional Network Access
               </h3>
               <div className="grid md:grid-cols-2 gap-6 font-mono text-sm">
                 <div className="text-center">
                   <div className="text-neon-cyan mb-2">Email Terminal</div>
-                  <div className="text-muted-foreground">contact@retroarcade.game</div>
+                  <div className="text-muted-foreground">analyst@dataportfolio.dev</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-neon-cyan mb-2">Discord Channel</div>
-                  <div className="text-muted-foreground">#retro-gaming-hub</div>
+                  <div className="text-neon-cyan mb-2">LinkedIn Network</div>
+                  <div className="text-muted-foreground">/in/data-analyst-pro</div>
                 </div>
               </div>
             </div>

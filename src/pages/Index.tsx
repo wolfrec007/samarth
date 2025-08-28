@@ -23,21 +23,21 @@ const Index = () => {
           {/* Animated Neon Logo */}
           <h1 className="font-retro text-6xl md:text-8xl font-black mb-8">
             <span className="neon-text-xl animate-neon-pulse">
-              RETRO
+              DATA
             </span>
             <br />
             <span className="neon-text-lg animate-flicker-slow text-neon-cyan">
-              ARCADE
+              ANALYST
             </span>
           </h1>
           
           <p className="font-mono text-xl md:text-2xl mb-12 text-foreground/80 animate-flicker">
-            &gt; Welcome to the neon-lit world of classic gaming
+            &gt; Welcome to the neon-lit world of data-driven insights
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <NeonButton size="lg" glowing>
-              Enter Game Zone
+              View Portfolio
             </NeonButton>
             <Link to="/getintouch">
               <NeonButton variant="secondary" size="lg">
@@ -58,58 +58,58 @@ const Index = () => {
       <section className="py-20 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-retro text-4xl md:text-6xl text-center mb-16 neon-text-lg animate-glow-pulse">
-            Game Features
+            Skill Matrix
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Classic Arcade Experience */}
+            {/* Data Visualization */}
             <RetroCard animated glowing className="text-center">
               <div className="mb-6 flex justify-center">
                 <img 
                   src={arcadeIcon} 
-                  alt="Arcade Cabinet" 
+                  alt="Data Visualization" 
                   className="w-24 h-24 filter drop-shadow-[0_0_15px_rgba(0,255,0,0.6)] animate-glow-pulse"
                 />
               </div>
               <h3 className="font-retro text-2xl mb-4 neon-text">
-                Classic Arcade
+                Data Visualization
               </h3>
               <p className="font-mono text-muted-foreground">
-                Experience the golden age of gaming with authentic 1980s arcade aesthetics and nostalgic gameplay mechanics.
+                Transform complex datasets into stunning visual narratives using Python, Tableau, and D3.js. Creating pixel-perfect charts and dashboards that tell compelling data stories.
               </p>
             </RetroCard>
             
-            {/* Retro Controllers */}
+            {/* Statistical Analysis */}
             <RetroCard animated glowing className="text-center">
               <div className="mb-6 flex justify-center">
                 <img 
                   src={joystickIcon} 
-                  alt="Retro Joystick" 
+                  alt="Statistical Analysis" 
                   className="w-24 h-24 filter drop-shadow-[0_0_15px_rgba(0,255,255,0.6)] animate-glow-pulse"
                 />
               </div>
               <h3 className="font-retro text-2xl mb-4 text-neon-cyan neon-text">
-                Retro Controls
+                Statistical Mastery
               </h3>
               <p className="font-mono text-muted-foreground">
-                Master the classic 8-way joystick and button combinations that defined an entire generation of gamers.
+                Master advanced statistical techniques, machine learning algorithms, and predictive modeling. Wielding R, Python, and SQL like classic arcade controls.
               </p>
             </RetroCard>
             
-            {/* Power-ups & Bonuses */}
+            {/* Business Intelligence */}
             <RetroCard animated glowing className="text-center">
               <div className="mb-6 flex justify-center">
                 <img 
                   src={powerupIcon} 
-                  alt="Power-up Orb" 
+                  alt="Business Intelligence" 
                   className="w-24 h-24 filter drop-shadow-[0_0_15px_rgba(255,165,0,0.6)] animate-glow-pulse"
                 />
               </div>
               <h3 className="font-retro text-2xl mb-4 text-retro-orange neon-text">
-                Power Systems
+                Business Intelligence
               </h3>
               <p className="font-mono text-muted-foreground">
-                Collect energy orbs and unlock special abilities to enhance your gaming experience and achieve high scores.
+                Power up business decisions with actionable insights. Specializing in KPI dashboards, performance metrics, and strategic data solutions that drive growth.
               </p>
             </RetroCard>
           </div>
@@ -121,26 +121,26 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <RetroCard className="text-center">
             <h2 className="font-retro text-4xl md:text-5xl mb-8 neon-text-lg">
-              High Score Leaderboard
+              Achievement Leaderboard
             </h2>
             
             <div className="space-y-4 font-mono">
               {[
-                { rank: 1, name: "NEON_MASTER", score: "999,999" },
-                { rank: 2, name: "PIXEL_HERO", score: "888,888" },
-                { rank: 3, name: "RETRO_KING", score: "777,777" },
-                { rank: 4, name: "ARCADE_ACE", score: "666,666" },
-                { rank: 5, name: "CYBER_PUNK", score: "555,555" }
-              ].map((player) => (
+                { rank: 1, name: "DATA_ACCURACY", score: "99.8%" },
+                { rank: 2, name: "MODEL_PRECISION", score: "97.5%" },
+                { rank: 3, name: "SQL_QUERIES", score: "10K+" },
+                { rank: 4, name: "DASHBOARDS", score: "150+" },
+                { rank: 5, name: "INSIGHTS_DELIVERED", score: "500+" }
+              ].map((achievement) => (
                 <div 
-                  key={player.rank} 
+                  key={achievement.rank} 
                   className="flex justify-between items-center p-4 border border-border/50 rounded-sm hover:border-neon-green/50 transition-colors animate-flicker"
                 >
                   <span className="text-neon-green">
-                    #{player.rank}. {player.name}
+                    #{achievement.rank}. {achievement.name}
                   </span>
                   <span className="text-neon-cyan neon-text">
-                    {player.score}
+                    {achievement.score}
                   </span>
                 </div>
               ))}
@@ -148,7 +148,7 @@ const Index = () => {
             
             <div className="mt-8">
               <NeonButton variant="accent" size="lg">
-                Challenge the Board
+                View Case Studies
               </NeonButton>
             </div>
           </RetroCard>
@@ -159,18 +159,18 @@ const Index = () => {
       <section className="py-20 px-6 relative">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-retro text-4xl md:text-6xl mb-8 neon-text-xl animate-neon-pulse">
-            Ready to Play?
+            Ready to Collaborate?
           </h2>
           <p className="font-mono text-xl mb-12 text-muted-foreground">
-            Join the retro gaming revolution and experience the magic of classic arcade entertainment.
+            Join forces with a data analyst who transforms raw information into strategic advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <NeonButton size="lg" glowing>
-              Start Game
+              Download Resume
             </NeonButton>
             <Link to="/getintouch">
               <NeonButton variant="secondary" size="lg">
-                Get in Touch
+                Start Project
               </NeonButton>
             </Link>
           </div>
