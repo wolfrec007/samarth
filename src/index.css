@@ -83,13 +83,13 @@
   .neon-text {
     color: hsl(var(--neon-green));
     text-shadow: var(--glow-md);
-    animation: flicker 2s infinite alternate;
+    animation: flicker 6s infinite alternate;
   }
   
   .neon-text-lg {
     color: hsl(var(--neon-green));
     text-shadow: var(--glow-lg);
-    animation: flicker-slow 3s infinite alternate;
+    animation: flicker-slow 9s infinite alternate;
   }
   
   .neon-text-xl {
@@ -215,14 +215,14 @@
 @layer utilities {
   @keyframes flicker {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+    50% { opacity: 0.94; }
   }
   
   @keyframes flicker-slow {
     0%, 100% { opacity: 1; text-shadow: var(--glow-lg); }
-    25% { opacity: 0.9; text-shadow: var(--glow-md); }
-    50% { opacity: 0.95; text-shadow: var(--glow-lg); }
-    75% { opacity: 0.85; text-shadow: var(--glow-md); }
+    25% { opacity: 0.97; text-shadow: var(--glow-lg); }
+    50% { opacity: 0.985; text-shadow: var(--glow-lg); }
+    75% { opacity: 0.955; text-shadow: var(--glow-lg); }
   }
   
   @keyframes neon-pulse {
@@ -263,8 +263,8 @@
   }
   
   /* Utility Classes */
-  .animate-flicker { animation: flicker 2s infinite alternate; }
-  .animate-flicker-slow { animation: flicker-slow 3s infinite alternate; }
+  .animate-flicker { animation: flicker 6s infinite alternate; }
+  .animate-flicker-slow { animation: flicker-slow 9s infinite alternate; }
   .animate-neon-pulse { animation: neon-pulse 2s ease-in-out infinite alternate; }
   .animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
   .animate-border-scan { animation: border-scan 3s linear infinite; }

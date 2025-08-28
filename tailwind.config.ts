@@ -110,13 +110,13 @@ export default {
 				},
 				'flicker': {
 					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.8' }
+					'50%': { opacity: '0.94' }
 				},
 				'flicker-slow': {
 					'0%, 100%': { opacity: '1' },
-					'25%': { opacity: '0.9' },
-					'50%': { opacity: '0.95' },
-					'75%': { opacity: '0.85' }
+					'25%': { opacity: '0.97' },
+					'50%': { opacity: '0.985' },
+					'75%': { opacity: '0.955' }
 				},
 				'neon-pulse': {
 					'0%': { transform: 'scale(1)' },
@@ -142,8 +142,8 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'flicker': 'flicker 2s infinite alternate',
-				'flicker-slow': 'flicker-slow 3s infinite alternate',
+				'flicker': 'flicker 6s infinite alternate',
+				'flicker-slow': 'flicker-slow 9s infinite alternate',
 				'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'border-scan': 'border-scan 3s linear infinite',
