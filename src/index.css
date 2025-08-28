@@ -1,96 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Retro Gaming Design System - Deep Black with Neon Green Accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Core Retro Gaming Palette */
+    --background: 0 0% 0%;                    /* Deep black */
+    --foreground: 120 100% 50%;               /* Neon green */
+    
+    --card: 0 0% 5%;                          /* Very dark gray */
+    --card-foreground: 120 100% 50%;         /* Neon green */
+    
+    --popover: 0 0% 8%;                       /* Dark popup background */
+    --popover-foreground: 120 100% 50%;      /* Neon green */
+    
+    --primary: 120 100% 50%;                  /* Neon green primary */
+    --primary-foreground: 0 0% 0%;           /* Black text on neon */
+    
+    --secondary: 0 0% 15%;                    /* Dark gray secondary */
+    --secondary-foreground: 120 80% 70%;     /* Light neon green */
+    
+    --muted: 0 0% 10%;                        /* Muted dark */
+    --muted-foreground: 120 50% 40%;         /* Muted green */
+    
+    --accent: 180 100% 50%;                   /* Cyan accent */
+    --accent-foreground: 0 0% 0%;            /* Black on cyan */
+    
+    --destructive: 0 100% 50%;                /* Red for errors */
+    --destructive-foreground: 0 0% 100%;     /* White on red */
+    
+    --border: 120 50% 25%;                    /* Dark green border */
+    --input: 0 0% 10%;                        /* Dark input background */
+    --ring: 120 100% 50%;                     /* Neon green focus ring */
+    
+    --radius: 4px;                            /* Pixel-perfect radius */
+    
+    /* Retro Gaming Specific Colors */
+    --neon-green: 120 100% 50%;               /* Main neon green */
+    --neon-green-glow: 120 100% 50%;          /* Glow effect */
+    --neon-cyan: 180 100% 50%;                /* Secondary neon */
+    --retro-orange: 30 100% 50%;              /* Retro orange accent */
+    --retro-purple: 270 100% 60%;             /* Retro purple */
+    --scan-line: 120 30% 30%;                 /* Scanline effect */
+    
+    /* Glow Effects */
+    --glow-sm: 0 0 5px hsl(var(--neon-green));
+    --glow-md: 0 0 10px hsl(var(--neon-green)), 0 0 20px hsl(var(--neon-green));
+    --glow-lg: 0 0 15px hsl(var(--neon-green)), 0 0 30px hsl(var(--neon-green)), 0 0 45px hsl(var(--neon-green));
+    --glow-xl: 0 0 20px hsl(var(--neon-green)), 0 0 40px hsl(var(--neon-green)), 0 0 60px hsl(var(--neon-green)), 0 0 80px hsl(var(--neon-green));
+    
+    /* Animation Timings */
+    --flicker-fast: 0.1s;
+    --flicker-medium: 0.3s;
+    --flicker-slow: 0.6s;
   }
 }
 
@@ -101,5 +67,220 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Share Tech Mono', monospace;
+    overflow-x: hidden;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+  }
+}
+
+/* Retro Gaming Components & Animations */
+@layer components {
+  /* Neon Text Effects */
+  .neon-text {
+    color: hsl(var(--neon-green));
+    text-shadow: var(--glow-md);
+    animation: flicker 2s infinite alternate;
+  }
+  
+  .neon-text-lg {
+    color: hsl(var(--neon-green));
+    text-shadow: var(--glow-lg);
+    animation: flicker-slow 3s infinite alternate;
+  }
+  
+  .neon-text-xl {
+    color: hsl(var(--neon-green));
+    text-shadow: var(--glow-xl);
+    animation: neon-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  /* Arcade Frames */
+  .arcade-frame {
+    border: 2px solid hsl(var(--neon-green));
+    box-shadow: 
+      inset 0 0 10px hsl(var(--neon-green) / 0.2),
+      0 0 10px hsl(var(--neon-green) / 0.4),
+      0 0 20px hsl(var(--neon-green) / 0.2);
+    position: relative;
+  }
+  
+  .arcade-frame::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+      transparent 30%, 
+      hsl(var(--neon-green) / 0.1) 50%, 
+      transparent 70%);
+    animation: border-scan 3s linear infinite;
+    z-index: -1;
+  }
+  
+  /* Retro Buttons */
+  .retro-button {
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
+    border: 2px solid hsl(var(--neon-green));
+    color: hsl(var(--neon-green));
+    text-shadow: 0 0 5px hsl(var(--neon-green));
+    box-shadow: 
+      inset 0 1px 0 hsl(var(--neon-green) / 0.2),
+      0 0 10px hsl(var(--neon-green) / 0.3);
+    transition: all 0.2s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .retro-button:hover {
+    background: hsl(var(--neon-green) / 0.1);
+    box-shadow: 
+      inset 0 1px 0 hsl(var(--neon-green) / 0.4),
+      0 0 20px hsl(var(--neon-green) / 0.6),
+      0 0 40px hsl(var(--neon-green) / 0.3);
+    text-shadow: 0 0 10px hsl(var(--neon-green));
+    transform: translateY(-1px);
+  }
+  
+  .retro-button:active {
+    transform: translateY(0);
+    box-shadow: 
+      inset 0 2px 4px hsl(var(--neon-green) / 0.3),
+      0 0 15px hsl(var(--neon-green) / 0.4);
+  }
+  
+  /* Scanlines Effect */
+  .scanlines {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      hsl(var(--scan-line) / 0.1) 2px,
+      hsl(var(--scan-line) / 0.1) 4px
+    );
+    pointer-events: none;
+    animation: scan-move 0.1s linear infinite;
+  }
+  
+  /* Pixel Border */
+  .pixel-border {
+    border: 3px solid hsl(var(--neon-green));
+    border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0,0 l0,20 l20,0 l0,-20 z m20,20 l0,20 l20,0 l0,-20 z m20,20 l0,20 l20,0 l0,-20 z m20,20 l0,20 l20,0 l0,-20 z' fill='%2300ff00'/%3e%3c/svg%3e") 20;
+  }
+  
+  /* Retro Input Styling */
+  .retro-input {
+    background: hsl(var(--input));
+    border: 2px solid hsl(var(--border));
+    color: hsl(var(--neon-green));
+    font-family: 'Share Tech Mono', monospace;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .retro-input:focus {
+    outline: none;
+    border-color: hsl(var(--neon-green));
+    box-shadow: 
+      0 0 0 1px hsl(var(--neon-green)),
+      0 0 10px hsl(var(--neon-green) / 0.3),
+      inset 0 0 10px hsl(var(--neon-green) / 0.1);
+    text-shadow: 0 0 5px hsl(var(--neon-green));
+  }
+  
+  .retro-input::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+}
+
+/* Retro Gaming Animations */
+@layer utilities {
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  @keyframes flicker-slow {
+    0%, 100% { opacity: 1; text-shadow: var(--glow-lg); }
+    25% { opacity: 0.9; text-shadow: var(--glow-md); }
+    50% { opacity: 0.95; text-shadow: var(--glow-lg); }
+    75% { opacity: 0.85; text-shadow: var(--glow-md); }
+  }
+  
+  @keyframes neon-pulse {
+    0% { 
+      text-shadow: var(--glow-lg);
+      transform: scale(1);
+    }
+    100% { 
+      text-shadow: var(--glow-xl);
+      transform: scale(1.02);
+    }
+  }
+  
+  @keyframes border-scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  @keyframes scan-move {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 5px hsl(var(--neon-green)), 0 0 10px hsl(var(--neon-green)), 0 0 15px hsl(var(--neon-green));
+    }
+    50% { 
+      box-shadow: 0 0 10px hsl(var(--neon-green)), 0 0 20px hsl(var(--neon-green)), 0 0 30px hsl(var(--neon-green));
+    }
+  }
+  
+  @keyframes matrix-rain {
+    0% { transform: translateY(-100vh); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+  
+  /* Utility Classes */
+  .animate-flicker { animation: flicker 2s infinite alternate; }
+  .animate-flicker-slow { animation: flicker-slow 3s infinite alternate; }
+  .animate-neon-pulse { animation: neon-pulse 2s ease-in-out infinite alternate; }
+  .animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
+  .animate-border-scan { animation: border-scan 3s linear infinite; }
+  
+  /* Retro Color Classes */
+  .text-neon { color: hsl(var(--neon-green)); }
+  .text-cyan { color: hsl(var(--neon-cyan)); }
+  .text-retro-orange { color: hsl(var(--retro-orange)); }
+  .text-retro-purple { color: hsl(var(--retro-purple)); }
+  
+  .bg-retro-card { background: hsl(var(--card)); }
+  .bg-retro-dark { background: hsl(var(--secondary)); }
+  
+  /* Glow Effects */
+  .glow-sm { box-shadow: var(--glow-sm); }
+  .glow-md { box-shadow: var(--glow-md); }
+  .glow-lg { box-shadow: var(--glow-lg); }
+  .glow-xl { box-shadow: var(--glow-xl); }
 }
